@@ -6,5 +6,8 @@
 
 <ion-content padding class="home">
   <h2>Speending 2</h2>
+  <div>
+    <nvd3 [options]="options" [data]="data"></nvd3>
+  </div>
   <button ion-button small clear (click)="logOut()">Logout</button>
 </ion-content>

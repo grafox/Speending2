@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { NvD3Module } from 'ng2-nvd3';
+
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ForgotPage } from '../pages/forgot/forgot';
@@ -26,13 +28,16 @@ export const firebaseConfig = {
   messagingSenderId: "1018202227947"
 };
 
+import 'd3';
+import 'nvd3';
 
 @NgModule({
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NvD3Module
   ],
   declarations: [
     MyApp,
